@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة Ihya Rachid | رحلة التطوير</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* الهيدر والقائمة */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #1a252f;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--white);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--secondary-color); }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        /* تنسيق المقال التقني */
+        .main-article {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+
+        .main-article h1 { color: var(--primary-color); border-bottom: 3px solid var(--secondary-color); padding-bottom: 10px; }
+        .main-article h3 { color: var(--secondary-color); margin-top: 25px; }
+        .main-article p { font-size: 1.1rem; text-align: justify; }
+
+        /* الأقسام الجانبية (صور ومشاريع) */
+        .section-title {
+            margin: 40px 0 20px;
+            padding-right: 15px;
+            border-right: 5px solid var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 20px; }
+
+        /* قسم التعليقات */
+        #disqus_thread {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 50px;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>مدونة Ihya Rachid التقنية</h1>
+    <p>بناء المستقبل من بيئة Debian 13</p>
+</header>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="#projects">مشاريعي</a>
+    <a href="#gallery">معرض الصور</a>
+    <a href="contact.html">تواصل معي</a>
+</nav>
+
+<div class="container">
+    
+    <article class="main-article">
+        <h1>تقرير تقني: رحلة بناء مدونة احترافية متكاملة عبر بيئة Debian 13</h1>
+        <p>في ظل التطور الرقمي المتسارع، لم تعد عملية تطوير المواقع محصورة على أجهزة الحاسوب المكتبية القوية. هذا المقال يستعرض تجربة واقعية قمت بها لبناء مدونة ويب متكاملة، تعتمد على معايير حديثة، وتم تنفيذ كافة مراحلها برمجياً عبر هاتف محمول يعمل ببيئة <strong>Debian 13</strong>.</p>
+        
+        <h3>1. إعداد بيئة العمل (The Environment)</h3>
+	<img src="images/received_1031234897026789.jpeg" style="width:100%; border-radius:8px; margin:20px 0;">
+
+        <p>بدأت الرحلة باختيار نظام Debian 13 كقاعدة انطلاق، لما يوفره من استقرار وأدوات برمجية قوية تحاكي سيرفرات الويب الحقيقية. تم إعداد محرر الأكواد والاعتماد على متصفح الهاتف لاختبار النتائج لحظياً عبر السيرفر المحلي.</p>
+
+        <h3>2. الهيكلة وبناء الواجهة (Frontend)</h3>
+        <p>تم تصميم واجهة المستخدم باستخدام لغات الويب الأساسية HTML5 لبناء الهيكل الإنشائي، و CSS3 لتطوير نمط بصري عصري يعتمد على نظام الشبكات (Grid System) لضمان استجابة الموقع مع كافة أحجام الشاشات.</p>
+
+        <h3>3. دمج الأنظمة التفاعلية (Services)</h3>
+        <p>لجعل المدونة حية، تم دمج نظام التعليقات <strong>Disqus</strong> لتوفير منصة نقاش للزوار، وربط صفحة الاتصال بخدمة <strong>Formspree</strong> لضمان وصول الرسائل مباشرة إلى البريد الإلكتروني بحماية عالية.</p>
+        
+        <p><em>الخلاصة: هذا المشروع هو إثبات على أن الإرادة والتقنيات مفتوحة المصدر يمكنها تحويل الهاتف إلى منصة إبداع احترافية.</em></p>
+    </article>
+
+    <h2 id="projects" class="section-title">مشاريعي البرمجية</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <h3>نظام إدارة المحتوى</h3>
+                <p>تطوير نظام بسيط لإدارة المقالات باستخدام لغات الويب الأساسية.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h3>تطبيق الويب Debian-Mobile</h3>
+                <p>تجربة تشغيل بيئات التطوير الكاملة على الأجهزة المحمولة.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="gallery" class="section-title">معرض الصور الفنية</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="1767112639961.jpg" alt="بيئة العمل">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300?text=Coding" alt="برمجة">
+        </div>
+    </div>
+
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = window.location.href;  
+            this.page.identifier = 'ihya_rachid_report'; 
+        };
+        (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://ihyarachid.disqus.com/embed.js'; 
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+</div>
+
+<footer>
+    <p>© 2025 Ihya Rachid | تم التطوير باستخدام Debian 13 على الهاتف</p>
+</footer>
+
+</body>
+</html>
+
